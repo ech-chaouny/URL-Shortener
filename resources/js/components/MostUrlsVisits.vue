@@ -19,7 +19,7 @@
             <th scope="col">Actions</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-if="store.getmostVisitedUrls.length > 0">
           <tr v-for="url in store.getmostVisitedUrls" :key="url.id">
             <td>{{ url.name_link }}</td>
             <td>
@@ -68,6 +68,12 @@
                 </a>
               </div>
             </td>
+          </tr>
+        </tbody>
+        <tbody v-else>
+          <!-- Display a message when there are no URLs -->
+          <tr>
+            <td colspan="6" class="text-center">No URLs available</td>
           </tr>
         </tbody>
       </table>
