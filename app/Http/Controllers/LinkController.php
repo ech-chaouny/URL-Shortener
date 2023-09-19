@@ -65,14 +65,15 @@ class LinkController extends Controller
      */
     public function update(UpdateLinkRequest $request, Link $link)
     {
-        $link->update([
-            'full_link' => $request->full_link,
-            'full_name' => $request->full_name,
-            'shortner_link' => 'www.linkshort' + Str::random(4) + '.ech',
-            'visits' => 0,
-            'user_id' => $request->user_id,
-        ]);
-        return response()->json($link);
+        //i dont work on the upadate because  it was not mentioned in Challenge
+        // $link->update([
+        //     'full_link' => $request->full_link,
+        //     'full_name' => $request->full_name,
+        //     'shortner_link' => 'www.linkshort' + Str::random(4) + '.ech',
+        //     'visits' => 0,
+        //     'user_id' => $request->user_id,
+        // ]);
+        // return response()->json($link);
     }
 
     /**
